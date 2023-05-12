@@ -1,1 +1,7 @@
-*.gz
+# Ignore everything
+*
+
+# Allow PDF, TeX, and Markdown files
+!*.pdf
+!*.tex
+!*.md
