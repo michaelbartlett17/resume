@@ -1,8 +1,6 @@
-# Ignore everything
-*
-
-# Allow PDF, TeX, Markdown, and yml files
-!*.pdf
-!*.tex
-!*.md
-!*.yml
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz

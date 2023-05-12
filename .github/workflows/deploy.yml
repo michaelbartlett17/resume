@@ -1,0 +1,25 @@
+name: Push File
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      with:
+        source_file: 'resume.pdf'
+        destination_repo: 'michaelbartlett17/website'
+        destination_folder: 'static/documents'
+        user_email: ${{ secrets.EMAIL }}
+        user_name: 'michaelbartlett17'
+        commit_message: 'Updated resume'
