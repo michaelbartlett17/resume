@@ -1,7 +1,8 @@
 # Ignore everything
 *
 
-# Allow PDF, TeX, and Markdown files
+# Allow PDF, TeX, Markdown, and yml files
 !*.pdf
 !*.tex
 !*.md
+!*.yml
